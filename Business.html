@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<h1 style="backgraound: white"><center>Business Registration Form</center></h1>
+</html>
+<body bgcolor="skyblue">
+<table cellpadding="5" width="30%" bgcolor="pink" align="center"
+cellspacing="5">
+<body>
+  <form id="registration-form">
+    <tr>
+    <td><label for="name">Business Owner:</label></td>
+    <td><input type="text" id="name" name="name" placeholder="firstname" required ></td>
+    <td><input type="text" id="name" name="name" placeholder="Lastname" required></td>
+    </tr>
+    <tr>
+    <td><label for="text">Business Name:</label></td>
+    <td><input type="text" id="name" name="name" required minlength="3" maxlength="50"></td>
+    </tr>
+    <tr>
+    <td><label for="phone">Contact Number:</label></td>
+    <td><input type="tel" id="phone" name="phone" required pattern="[0-9]{10}"></td>
+    </tr>
+    <tr>
+    <td><label for="email">E-mail:</label></td>
+    <td><input type="email" id="email" name="email" required minlength="10" maxlength="200"></td>
+    </tr>
+    <td><label for="password">Password:</label></td>
+    <td><input type="password" id="password" name="Password" required minlength="14" maxlength="20"></td>
+    </tr>
+        <tr>
+    <td><label for="text">Address:</label></td>
+    <td><input type="text" id="name" name="name" placeholder="stress Address" required></td>
+    </tr>
+        <tr>
+    <td><label for="text"></label></td>
+    <td><input type="text" id="name" name="name" placeholder="stress Address line 2" required></td>
+    </tr>
+    <tr>
+    <td><label for="name"></label></td>
+    <td><input type="text" id="name" name="name" placeholder="City" required ></td>
+    <td><input type="text" id="name" name="name" placeholder="State / Provence" required></td>
+    </tr>
+    <td><label for="text"></label></td>
+    <td><input type="text" id="name" name="name" placeholder="Postal / Zip code" required></td>
+    </tr>
+    <tr>
+            <td>
+                Type Of Business:
+            </td>
+            <td>
+                <select>
+                    <option value="">Shop/Cafe</option>
+                    <option value="">Lending</option>
+                    <option value="">Store</option>
+                    <option value="">Rentals</option>
+                    <option value="">Other, please Specify Below</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+        <td><label for="text">Others:</label></td>
+    <td><input type="text" id="name" name="name" required></td>
+    </tr>
+    <tr>
+    <td><label for="text">Message</label></td>
+    <td><textarea type="text" id="name" name="name" required></textarea></td>
+    </tr>
+    <tr>
+    <td><label for="text"></label></td>
+    <td><input type="submit" value="Submit"></td>
+    </tr>
+  </form>
+
+<script>
+    const form = document.querySelector('#registration-form');
+    form.addEventListener('Register', (event) => {
+      event.preventDefault();
+      const name = form.elements['name'].value;
+      const email = form.elements['email'].value;
+      const phone = form.elements['phone'].value;
+      const password = form.elements['password'].value;
+      console.log(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nPassword: ${password}`);
+  </script>
+</script>
+</body>
+</html>
